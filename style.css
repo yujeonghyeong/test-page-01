@@ -1,0 +1,520 @@
+@charset "utf-8";
+@import "./reset.css";
+@import "./common.css";
+.content-wrapper,
+.content-wrapper * {
+  box-sizing: border-box;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 7.5rem 0rem 7.5rem 0rem;
+}
+.content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  flex-shrink: 0;
+  max-width: 73.125rem;
+  position: relative;
+}
+.section-title {
+  font-size: 2rem;
+  color: var(--slate-700, #334155);
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    padding: 3.75rem 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .content-wrap {
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content-wrapper {
+    padding: 0;
+  }
+
+  .content-wrap {
+    padding: 1.88rem 1rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* // 로그인페이지 login.html // */
+.login-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.56rem;
+  padding: 4.25rem 2rem;
+  border: 1px solid #bfbfbf;
+  border-radius: 8px;
+  max-width: 775px;
+  /* margin: 0 auto; */
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+.login-section .personal-info {
+  max-width: 613px;
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+.login-section .personal-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  width: 100%;
+}
+.login-section .personal-info .form-group {
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.login-section .personal-info .form-group input {
+  width: 100%;
+}
+.login-section button {
+  background: var(--blue-500, #3b82f6);
+  border-radius: 0.3125rem;
+  border: 1px solid var(--blue-500);
+  border-width: 0.0625rem;
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 3.25rem;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  max-width: none;
+}
+.login-section .privacy-agreement-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.login-section
+  .login-section
+  .privacy-agreement-checkbox
+  .privacy-agreement-checkbox2
+  label {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
+.login- .login-section .account-recovery-options {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.login-section .account-recovery-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.login-section .account-recovery-links a {
+  color: #6b7280;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.login-section .account-recovery-links a:hover {
+  color: #3b82f6;
+}
+.login-section .account-recovery-links .divider {
+  color: #d1d5db;
+}
+.login-section .form-group.id-check {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.login-section .sign-up-prompt {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+.login-section .sign-up-prompt a {
+  color: var(--blue-500, #3b82f6);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .login-section {
+    padding: 0;
+    border: none;
+    gap: 2.5rem;
+  }
+}
+/* // 회원가입페이지 signup-01.html // */
+.signup-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.5625rem;
+  max-width: 775px;
+  /* margin: 0 auto; */
+}
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+.signup-section .form-wrap {
+  border-radius: 8px;
+  border: 1px solid #dadada;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: center;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+.signup-section .btn-contained.signup {
+  background: var(--blue-500, #3b82f6);
+  border: 1px solid var(--blue-500);
+  border-radius: 0.3125rem;
+  display: flex;
+  padding: 0rem 1rem;
+  width: 180px;
+  height: 52px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.privacy-agreement {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.privacy-agreement-checkbox.all {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  border-bottom: 1px dashed #dadada;
+  width: 100%;
+}
+.privacy-agreement .checkbox-text {
+  color: #404040;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 480px) {
+  .signup-section .form-wrap {
+    border: none;
+    padding: 0;
+  }
+}
+
+/* 개인정보 동의 영역 스타일 */
+.agreement-wrap {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.agreement-all {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.agreement-required {
+  padding: 16px;
+}
+
+.agreement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+}
+
+.checkbox-input:checked + .checkbox-label .checkbox-icon {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.checkbox-input:checked + .checkbox-label .checkbox-icon::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-text {
+  font-size: 1rem;
+  color: #404040;
+}
+
+.required-text {
+  color: #3b82f6;
+  margin-right: 4px;
+}
+
+.btn-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.btn-toggle .material-symbols-outlined {
+  color: #6b7280;
+  font-size: 20px;
+}
+
+.agreement-content {
+  background-color: #f9fafb;
+  padding: 16px;
+  margin: 8px 0;
+  border-radius: 4px;
+  display: none;
+}
+
+.agreement-content.active {
+  display: block;
+}
+
+.content-inner {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.content-inner h3 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.content-inner ul {
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.content-inner ul li {
+  margin-bottom: 4px;
+  list-style-type: disc;
+}
+
+.content-inner ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* 회원가입 완료 스타일 */
+.signup02-section .signup-container {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #404040;
+  font-weight: 500;
+  display: flex;
+  padding: 3.4375rem 0rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.signup02-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.56rem;
+}
+.signup02-section .line {
+  width: 120px;
+  height: 1px;
+  background-color: #3b82f6;
+}
+.signup02-section .signup-container .sub-text {
+  font-size: 1rem;
+  color: #404040;
+  font-weight: 500;
+}
+
+.signup02-section .signup-container .highlight {
+  color: #3182f6;
+  font-weight: 600;
+}
+
+.signup02-section .button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+/* 진료과 드롭다운 스타일 */
+.dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 0.75rem;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-header:hover {
+  border-color: #3182f6;
+}
+
+.dropdown-text {
+  color: #404040;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  margin-top: 4px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.dropdown-item input[type="checkbox"] {
+  width: inherit;
+}
+.dropdown-item:hover {
+  background-color: #f8fafc;
+}
+
+.dropdown-item input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.selected-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.subject-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #eff6ff;
+  color: #3182f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.remove-subject {
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.remove-subject:hover {
+  color: #1b64da;
+}
