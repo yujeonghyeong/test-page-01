@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    e-hos
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</head>
+
+<body>
+  <div class="body-wrap">
+    <!-- 헤더 -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+          <img class="e-hos" src="/images/e-hos-logo.png" />
+        </div>
+        <div class="menu">
+          <a href="#" class="menu-item">포트폴리오</a>
+          <a href="#" class="menu-item">템플릿보기</a>
+          <a href="#" class="menu-item">요금안내</a>
+          <a href="#" class="menu-item">문의하기</a>
+        </div>
+        <div class="buttons">
+
+          <button class="primary-button" onclick="window.location.href='login.html'">
+            <p>로그인/회원가입</p>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+          <a href="#" class="menu-item">포트폴리오</a>
+          <a href="#" class="menu-item">템플릿보기</a>
+          <a href="#" class="menu-item">요금안내</a>
+          <a href="#" class="menu-item">문의하기</a>
+          <div class="mobile-buttons">
+            <button class="primary-button" onclick="window.location.href='login.html'">
+              <p>로그인/회원가입</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <div class="content-wrapper">
+      <div class="content-wrap">
+        <div class="signup-section">
+          <div class="section-title"> 회원가입 </div>
+          <!-- 스텝 인디케이터 추가 -->
+          <div class="step-indicator">
+            <div class="step-item">
+              <div class="step-circle ">1</div>
+              <div class="step-text">회원가입</div>
+            </div>
+            <div class="step-line completed"></div>
+            <div class="step-item">
+              <div class="step-circle active">2</div>
+              <div class="step-text">승인대기</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item">
+              <div class="step-circle">3</div>
+              <div class="step-text">신청 및 결제</div>
+            </div>
+          </div>
+          <div class="form-wrap">
+
+            <!-- 정보 입력 -->
+
+            <div class="signup-container">
+              <div class="form-group">
+                <label class="form-label" for="userid">아이디<span class="required">*</span>
+                  <div class="form-subtext">4~12자 이내, 영문, 숫자 사용 가능</div>
+                </label>
+
+                <div class="form-row">
+                  <input type="text" id="userid" class="form-input" placeholder="아이디" />
+                  <button type="button" class="btn-outlined">중복확인</button>
+                </div>
+              </div>
+
+              <div class="form-group password-group">
+                <label class="form-label" for="password">비밀번호<span class="required">*</span>
+                  <div class="form-subtext">특수문자와 대문자 포함 8자 이상</div>
+                </label>
+                <div class="form-column password-row">
+                  <input type="password" id="password" class="form-input" placeholder="비밀번호 입력" />
+                  <input type="password" id="password-confirm" class="form-input" placeholder="비밀번호 확인" />
+                </div>
+
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="name">업체명<span class="required">*</span></label>
+                <input type="text" id="companyname" class="form-input" placeholder="업체명" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">진료과<span class="required">*</span></label>
+                <div class="dropdown-container">
+                  <div class="dropdown-header" onclick="toggleDropdown()">
+                    <span class="dropdown-text">진료과 선택</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                  </div>
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-1" value="내과">
+                      <label for="subject-1">내과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-2" value="외과">
+                      <label for="subject-2">외과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-3" value="정형외과">
+                      <label for="subject-3">정형외과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-4" value="신경외과">
+                      <label for="subject-4">신경외과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-5" value="피부과">
+                      <label for="subject-5">피부과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-6" value="안과">
+                      <label for="subject-6">안과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-7" value="이비인후과">
+                      <label for="subject-7">이비인후과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-8" value="산부인과">
+                      <label for="subject-8">산부인과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-9" value="소아청소년과">
+                      <label for="subject-9">소아청소년과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-10" value="정신건강의학과">
+                      <label for="subject-10">정신건강의학과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-11" value="치과">
+                      <label for="subject-11">치과</label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="subject-12" value="한의원">
+                      <label for="subject-12">한의원</label>
+                    </div>
+                  </div>
+                </div>
+                <div id="selected-subjects" class="selected-subjects"></div>
+                <input type="hidden" id="subject" name="subject">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="name">담당자<span class="required">*</span></label>
+                <input type="text" id="name" class="form-input" placeholder="업체명" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">연락처<span class="required">*</span></label>
+                <input type="tel" id="phone" class="form-input" required pattern="\d{11}" placeholder="연락처" />
+                <div class="error-msg">-를 제외한 11자리를 입력하세요.</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="business-number">사업자등록번호<span class="required">*</span></label>
+                <input type="text" id="business-number" class="form-input" placeholder="000-00-00000"
+                  pattern="\d{3}-\d{2}-\d{5}" />
+                <div class="error-msg">올바른 사업자등록번호 형식으로 입력해주세요. (예: 123-45-67890)</div>
+              </div>
+
+
+
+
+
+              <div class="form-group">
+                <label class="form-label" for="address">주소<span class="required">*</span></label>
+                <div class="form-row">
+                  <input type="text" id="postcode" class="form-input" placeholder="우편번호" readonly />
+                  <button type="button" class="btn-outlined" onclick="searchAddress()">주소검색</button>
+                </div>
+                <input type="text" id="address" class="form-input" placeholder="기본주소" readonly />
+                <input type="text" id="detailAddress" class="form-input" placeholder="상세주소" />
+              </div>
+
+
+
+
+              <div class="form-group">
+                <label class="form-label" for="email">이메일</label>
+                <input type="email" id="email" class="form-input" placeholder="이메일" />
+
+                <div class="error-msg">올바른 메일을 입력해주세요.</div>
+              </div>
+              <!-- 신청 템플릿 유형 선택 -->
+              <div class="form-group">
+                <div class="label-row">
+                  <label class="form-label" for="template-type">신청 템플릿 유형<span class="required">*</span></label>
+                  <a href="template-types.html" class="chip-link">
+                    <span class="material-symbols-outlined">visibility</span>
+                    템플릿 유형보기
+                  </a>
+                </div>
+                <div class="template-type-wrap">
+                  <div class="radio-wrap">
+                    <input type="radio" id="template-a" name="template-type" value="A" class="radio-input" />
+                    <label for="template-a" class="radio-label">
+                      <span class="radio-icon"></span>
+                      <span class="radio-text">A타입</span>
+                    </label>
+                  </div>
+                  <div class="radio-wrap">
+                    <input type="radio" id="template-b" name="template-type" value="B" class="radio-input" />
+                    <label for="template-b" class="radio-label">
+                      <span class="radio-icon"></span>
+                      <span class="radio-text">B타입</span>
+                    </label>
+                  </div>
+                  <div class="radio-wrap">
+                    <input type="radio" id="template-c" name="template-type" value="C" class="radio-input" />
+                    <label for="template-c" class="radio-label">
+                      <span class="radio-icon"></span>
+                      <span class="radio-text">C타입</span>
+                    </label>
+                  </div>
+                  <div class="radio-wrap">
+                    <input type="radio" id="template-decision" name="template-type" value="decision"
+                      class="radio-input" />
+                    <label for="template-decision" class="radio-label">
+                      <span class="radio-icon"></span>
+                      <span class="radio-text">추후 결정</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 개인정보동의 -->
+              <div class="agreement-wrap">
+                <div class="agreement-all">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" id="check-all" class="checkbox-input" />
+                    <label for="check-all" class="checkbox-label">
+                      <span class="checkbox-icon"></span>
+                      <span class="checkbox-text">모두 동의합니다.</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="agreement-required">
+                  <div class="agreement-item">
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="check-privacy" class="checkbox-input" />
+                      <label for="check-privacy" class="checkbox-label">
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">
+                          <span class="required-text">(필수)</span>
+                          개인정보 수집 및 이용 동의
+                        </span>
+                      </label>
+                    </div>
+                    <button type="button" class="btn-toggle">
+                      <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                  </div>
+                  <div class="agreement-content">
+                    <div class="content-inner">
+                      <h3>1. 수집하는 개인정보 항목</h3>
+                      <ul>
+                        <li>필수항목: 성명, 생년월일, 성별, 휴대전화번호, 예약정보(진료과, 의료진, 예약일시)</li>
+                        <li>선택항목: 주소, 이메일, 기타 예약 관련 요청사항</li>
+                      </ul>
+                      <h3>2. 개인정보의 수집 및 이용 목적</h3>
+                      <ul>
+                        <li>진료 예약 신청 및 확인</li>
+                        <li>예약 관련 알림 및 변경 안내</li>
+                        <li>병원 서비스 이용 관련 상담 및 민원 처리</li>
+                      </ul>
+                      <h3>3. 개인정보의 보유 및 이용 기간</h3>
+                      <ul>
+                        <li>예약일로부터 ○○일 또는 관련 법령에 따른 보관 기간까지 보유 후 파기</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="agreement-item">
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="check-terms" class="checkbox-input" />
+                      <label for="check-terms" class="checkbox-label">
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">
+                          <span class="required-text">(필수)</span>
+                          이용약관 동의
+                        </span>
+                      </label>
+                    </div>
+                    <button type="button" class="btn-toggle">
+                      <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                  </div>
+                  <div class="agreement-content">
+                    <div class="content-inner">
+                      <h3>1. 수집하는 개인정보 항목</h3>
+                      <ul>
+                        <li>필수항목: 성명, 생년월일, 성별, 휴대전화번호, 예약정보(진료과, 의료진, 예약일시)</li>
+                        <li>선택항목: 주소, 이메일, 기타 예약 관련 요청사항</li>
+                      </ul>
+                      <h3>2. 개인정보의 수집 및 이용 목적</h3>
+                      <ul>
+                        <li>진료 예약 신청 및 확인</li>
+                        <li>예약 관련 알림 및 변경 안내</li>
+                        <li>병원 서비스 이용 관련 상담 및 민원 처리</li>
+                      </ul>
+                      <h3>3. 개인정보의 보유 및 이용 기간</h3>
+                      <ul>
+                        <li>예약일로부터 ○○일 또는 관련 법령에 따른 보관 기간까지 보유 후 파기</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 로그인 버튼 -->
+
+              <button type="submit" class="btn-contained signup"
+                onclick="window.location.href='signup-02.html'">회원가입</button>
+
+            </div>
+
+
+
+
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo" onclick="window.location.href='index.html'">
+        <img src="/images/e-hos-logo.png" alt="e-hos" />
+      </div>
+      <div class="footer-info">
+        <div class="info-row">
+          <p>주소 : 대구광역시 달서구 달구벌대로 1053 00000</p>
+          <p>사업자등록번호 : 000-00-00000</p>
+          <p>전화번호 : 1000-0000</p>
+        </div>
+
+        <div class="info-row">
+          <p>문의안내</p>
+          <p class="number">1000-0000</p>
+          <p>10:00-18:00 주말/공휴일 휴무</p>
+          <p>e-hos@email.co.kr</p>
+        </div>
+        <div class="info-row">
+          <p>요금관련</p>
+          <p class="time">요금안내</p>
+        </div>
+        <div class="copyright">
+          <p>e-hos © All rights reserved.</p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    function searchAddress() {
+      new daum.Postcode({
+        oncomplete: function (data) {
+          document.getElementById('postcode').value = data.zonecode;
+          document.getElementById('address').value = data.address;
+          document.getElementById('detailAddress').focus();
+        }
+      }).open();
+    }
+
+    // 진료과 드롭다운 관련 스크립트
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdownContent = document.querySelector('.dropdown-content');
+      const dropdownText = document.querySelector('.dropdown-text');
+      const selectedSubjects = document.getElementById('selected-subjects');
+      const subjectInput = document.getElementById('subject');
+      let isOpen = false;
+
+      function toggleDropdown() {
+        isOpen = !isOpen;
+        dropdownContent.style.display = isOpen ? 'block' : 'none';
+        document.querySelector('.dropdown-header .material-symbols-outlined').textContent =
+          isOpen ? 'expand_less' : 'expand_more';
+      }
+
+      window.toggleDropdown = toggleDropdown;
+
+      // 드롭다운 외부 클릭시 닫기
+      document.addEventListener('click', function (e) {
+        const container = document.querySelector('.dropdown-container');
+        if (!container.contains(e.target)) {
+          isOpen = false;
+          dropdownContent.style.display = 'none';
+          document.querySelector('.dropdown-header .material-symbols-outlined').textContent = 'expand_more';
+        }
+      });
+
+      // 체크박스 변경 이벤트
+      const checkboxes = document.querySelectorAll('.dropdown-item input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+          updateSelectedSubjects();
+        });
+      });
+
+      function updateSelectedSubjects() {
+        const selected = Array.from(checkboxes)
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        // hidden input 업데이트
+        subjectInput.value = selected.join(',');
+
+        // 선택된 항목 표시 업데이트
+        selectedSubjects.innerHTML = '';
+        selected.forEach(value => {
+          const tag = document.createElement('div');
+          tag.className = 'subject-tag';
+          tag.innerHTML = `
+            ${value}
+            <span class="remove-subject" data-value="${value}">×</span>
+          `;
+          selectedSubjects.appendChild(tag);
+        });
+
+        // 드롭다운 헤더 텍스트 업데이트
+        dropdownText.textContent = selected.length > 0 ? `${selected.length}개 선택됨` : '진료과 선택';
+      }
+
+      // 태그 삭제 이벤트
+      selectedSubjects.addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-subject')) {
+          const value = e.target.dataset.value;
+          const checkbox = Array.from(checkboxes).find(cb => cb.value === value);
+          if (checkbox) {
+            checkbox.checked = false;
+            updateSelectedSubjects();
+          }
+        }
+      });
+    });
+
+    // 개인정보 동의 관련 스크립트
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkAll = document.getElementById('check-all');
+      const checkboxes = document.querySelectorAll('.checkbox-input:not(#check-all)');
+      const toggleButtons = document.querySelectorAll('.btn-toggle');
+      const contents = document.querySelectorAll('.agreement-content');
+
+      // 전체 동의 체크박스 이벤트
+      checkAll.addEventListener('change', function () {
+        checkboxes.forEach(checkbox => {
+          checkbox.checked = this.checked;
+        });
+      });
+
+      // 개별 체크박스 이벤트
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+          const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+          checkAll.checked = allChecked;
+        });
+      });
+
+      // 토글 버튼 이벤트
+      toggleButtons.forEach((button, index) => {
+        button.addEventListener('click', function () {
+          contents[index].classList.toggle('active');
+          const icon = this.querySelector('.material-symbols-outlined');
+          icon.textContent = contents[index].classList.contains('active') ? 'expand_less' : 'expand_more';
+        });
+      });
+    });
+
+    // 모바일 메뉴 토글
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const overlay = document.querySelector('.overlay');
+
+      function toggleMenu() {
+        const isActive = mobileMenu.classList.contains('active');
+        mobileMenuBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = isActive ? '' : 'hidden';
+      }
+
+      mobileMenuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      // 메뉴 외부 클릭시 닫기
+      overlay.addEventListener('click', function () {
+        toggleMenu();
+      });
+
+      // ESC 키로 메뉴 닫기
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+          toggleMenu();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    e-hos
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <div class="body-wrap">
+    <!-- 헤더 -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+          <img class="e-hos" src="/images/e-hos-logo.png" />
+        </div>
+        <div class="menu">
+          <a href="#" class="menu-item">포트폴리오</a>
+          <a href="#" class="menu-item">템플릿보기</a>
+          <a href="#" class="menu-item">요금안내</a>
+          <a href="#" class="menu-item">문의하기</a>
+        </div>
+        <div class="buttons">
+
+          <button class="primary-button" onclick="window.location.href='login.html'">
+            <p>로그인/회원가입</p>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+      <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+          <a href="#" class="menu-item">포트폴리오</a>
+          <a href="#" class="menu-item">템플릿보기</a>
+          <a href="#" class="menu-item">요금안내</a>
+          <a href="#" class="menu-item">문의하기</a>
+          <div class="mobile-buttons">
+            <button class="primary-button" onclick="window.location.href='login.html'">
+              <p>로그인/회원가입</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <div class="content-wrapper">
+      <div class="content-wrap">
+        <div class="signup02-section">
+          <div class="section-title"> 회원가입 </div>
+
+          <!-- 스텝 인디케이터 추가 -->
+          <div class="step-indicator">
+            <div class="step-item">
+              <div class="step-circle ">1</div>
+              <div class="step-text">회원가입</div>
+            </div>
+            <div class="step-line completed"></div>
+            <div class="step-item">
+              <div class="step-circle active">2</div>
+              <div class="step-text">승인대기</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item">
+              <div class="step-circle">3</div>
+              <div class="step-text">신청 및 결제</div>
+            </div>
+          </div>
+
+
+
+          <div class="signup-container">
+            <p><span class="highlight">e-hos</span>에 가입해주셔서 감사합니다.</p>
+            <div class="sub-text">
+              <p>입력하신 정보를 바탕으로 병원 여부를 확인 중입니다.</p>
+              <p>안전한 서비스 운영을 위해 <span class="highlight">승인 절차가 필요</span>합니다.</p>
+            </div>
+            <div class="sub-text">
+              <p>📌승인까지는 최대 1일정도 소요될 수 있으며, <br> 승인 완료 시 <span class="highlight">
+                  이메일 또는 문자로 안내
+                </span>드릴 예정입니다.</p>
+            </div>
+            <div class="sub-text">
+              <p>승인 완료 후, 바로 홈페이지 신청 및 결제를 진행하실 수 있습니다. <br>궁금한 점이 있으시면 언제든지 고객센터로 문의바랍니다.</p>
+            </div>
+            <div class="sub-text">
+              <p style="font-weight: 600;">고객센터 문의번호 : 1000-0000</p>
+            </div>
+
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="btn-outlined" onclick="window.location.href='index.html'"
+              onclick="window.location.href='index.html'">홈으로</button>
+            <button type="button" class="btn-contained" onclick="window.location.href='login.html'">내 정보 확인하기</button>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo" onclick="window.location.href='index.html'">
+        <img src="/images/e-hos-logo.png" alt="e-hos" />
+      </div>
+      <div class="footer-info">
+        <div class="info-row">
+          <p>주소 : 대구광역시 달서구 달구벌대로 1053 00000</p>
+          <p>사업자등록번호 : 000-00-00000</p>
+          <p>전화번호 : 1000-0000</p>
+        </div>
+
+        <div class="info-row">
+          <p>문의안내</p>
+          <p class="number">1000-0000</p>
+          <p>10:00-18:00 주말/공휴일 휴무</p>
+          <p>e-hos@email.co.kr</p>
+        </div>
+        <div class="info-row">
+          <p>요금관련</p>
+          <p class="time">요금안내</p>
+        </div>
+        <div class="copyright">
+          <p>e-hos © All rights reserved.</p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // 모바일 메뉴 토글
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const overlay = document.querySelector('.overlay');
+
+      function toggleMenu() {
+        const isActive = mobileMenu.classList.contains('active');
+        mobileMenuBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = isActive ? '' : 'hidden';
+      }
+
+      mobileMenuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      // 메뉴 외부 클릭시 닫기
+      overlay.addEventListener('click', function () {
+        toggleMenu();
+      });
+
+      // ESC 키로 메뉴 닫기
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+          toggleMenu();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
